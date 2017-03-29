@@ -1,0 +1,142 @@
+.fusion-section-separator {
+  position: relative;
+
+  svg {
+    transform: scale( 1, 1 );
+  }
+  .divider-candy {
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+    height: 40px;
+    width: 40px;
+    border-bottom: 1px solid #E6E5E6;
+    border-left: 1px solid #E6E5E6;
+    background-color: transparent;
+    content: "";
+
+    &.bottom {
+      bottom: -21px;
+      transform: rotate( -45deg );
+    }
+
+    &.top {
+      top: -21px;
+      transform: rotate( 135deg );
+    }
+
+    &.both {
+      top: -21px;
+      transform: rotate(135deg);
+    }
+  }
+
+  .divider-candy-arrow {
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    margin-left: -29px;
+    height: 0;
+    width: 0;
+    border-color: transparent;
+    border-style: solid;
+
+    &.bottom {
+      border-width: 29px 29px 0 29px;
+    }
+
+    &.top {
+      bottom: 0;
+      border-width: 0 29px 29px;
+    }
+  }
+
+  .section-separator-icon {
+    z-index: 200;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    margin-left: -20px;
+    width: 40px;
+    font-size: 20px;
+    font-family: FontAwesome;
+    text-align: center;
+
+    &:after {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &.rounded-split-separator {
+    margin-top: 70px;
+  }
+
+  .rounded-split {
+    &.top {
+      &::before {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        top: -70px;
+        left: 0;
+        z-index: 10;
+        width: 50%;
+        height: 71px;
+        background: inherit;
+        border-radius: 0 0 80px 0;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        top: -70px;
+        left: 0;
+        z-index: 10;
+        width: 50%;
+        height: 71px;
+        background: inherit;
+        left: 50%;
+        border-radius: 0 0 0 80px;
+      }
+    }
+
+    &.bottom {
+      &::before {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        top: -70px;
+        left: 0;
+        z-index: 10;
+        width: 50%;
+        height: 71px;
+        background: inherit;
+        border-radius: 0 80px 0 0;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        top: -70px;
+        left: 0;
+        z-index: 10;
+        width: 50%;
+        height: 71px;
+        background: inherit;
+        left: 50%;
+        border-radius: 80px 0 0 0;
+      }
+    }
+  }
+
+  #bigHalfCircleCandy,
+  #bigTriangleCandy,
+  #cloudsCandy,
+  #curvedCandy {
+    display: block;
+  }
+}
